@@ -1,0 +1,75 @@
+@import "~normalize.css/normalize.css";
+$color--pink: #eba0a5;
+$color--purple: #5c2a6b;
+$color--blue: #1a0d74;
+$color--light: #e7e4e6;
+
+body {
+  background-color: $color--pink;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin: auto;
+  @media (min-width: 576px) {
+    width: 540px;
+  }
+  @media (min-width: 768px) {
+    width: 720px;
+  }
+}
+
+.result-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  .result-bar__failed {
+    color: $color--purple;
+    margin-right: 0.2rem;
+  }
+  .result-bar__passed {
+    color: $color--blue;
+    margin-left: 0.2rem;
+  }
+  .result-bar__time {
+    margin-left: auto;
+    color: $color--purple;
+  }
+}
+
+.main-wrapper {
+  background-color: $color--light;
+  border-radius: 10px;
+  padding: 1.5rem 3rem;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+  input {
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    border: 0;
+    border: solid 2px transparent;
+    padding: 0 0.3rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    &:focus {
+      outline: none;
+    }
+    &.success {
+      border-color: green;
+    }
+    &.error {
+      border-color: red;
+    }
+  }
+}
+
+.word {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
