@@ -48,6 +48,7 @@ testInput.oninput = e => {
     }
     setTimeout(() => {
       // Clear input, generate new random word and restart timer
+      start = false;
       testInput.value = "";
       testInput.classList.remove("success");
       testInput.classList.remove("error");
